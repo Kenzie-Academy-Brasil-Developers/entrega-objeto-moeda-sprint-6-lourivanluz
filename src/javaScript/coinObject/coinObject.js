@@ -11,16 +11,16 @@ const coin = {
   
     toHTML: function () {
       const image = document.createElement("img");
-      let imgResult = '../../img/cara.png'
+      let imgResult = 'cara.png'
       let imgAlt = 'Heads'
 
       if(this.state === 1){
-        imgResult = '../../img/coroa.png'
+        imgResult = 'coroa.png'
         imgAlt = 'Tails'
       }
-
-      image.src = 
+      image.src = `./src/img/${imgResult}`
       image.alt = imgAlt
+      image.classList.add('moeda')
       return image;
     },
   };

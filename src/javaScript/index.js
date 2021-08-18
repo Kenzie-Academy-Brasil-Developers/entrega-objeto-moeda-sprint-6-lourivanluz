@@ -23,15 +23,17 @@ function display20Flips() {
     // de retornar o valor de "results".
     // Caso esqueça de retornar "results", sua função não
     // irá passar nos testes.
+    const telaResult = document.createElement('div')
+    telaResult.classList.add('result')
 
     for(let count = 0; count <20; count++){
         coin.flip()
         const result = coin.state
         results.push(result)
-        document.body.appendChild(coin.toHTML())
+        telaResult.appendChild(coin.toHTML())
     }
+
+    document.body.appendChild(telaResult)
     return results
 
   }
-
-// console.log(display20Flips())
